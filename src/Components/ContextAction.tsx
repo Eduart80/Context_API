@@ -23,6 +23,7 @@ export const editTodo = React.createContext<ToDoItems>({id: 0, text: '', complet
 
 export const ClearCompletedContext = React.createContext<ClearCompletedContextType>({
   clearCompleted: () => {},
+  completed: { id: 0, text: '', completed: false }
 })
 
 export const ThemeContext = React.createContext<ThemeContextType>({ 

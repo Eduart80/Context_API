@@ -14,6 +14,8 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
+      <h3>Context API</h3>
+      <h6>Add a Todo...</h6>
       <div className={theme === 'light' ? 'light-mode' : 'dark-mode'}>
         <ThemeSet />
         <ToDaApp />

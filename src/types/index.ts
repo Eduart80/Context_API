@@ -2,7 +2,7 @@
 export interface ToDoItems {
     id:string | number
     text:string
-    completed:boolean
+    completed: boolean
 }
 export interface AddToDo {
     text:ToDoItems
@@ -14,4 +14,6 @@ export interface ThemeContextType {
 
 export interface ClearCompletedContextType {
   clearCompleted: () => void
+  completed: ToDoItems
 }
+

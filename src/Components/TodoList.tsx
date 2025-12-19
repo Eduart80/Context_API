@@ -1,13 +1,20 @@
 import React from 'react'
-import { ClearCompletedContext } from './ContextAction'
+import  ToDoItem  from './TodoItem'
+import type { ToDoItems } from '../types'
 
-export default function TodoList() {
-    const clearCompleted = () => {
-  setTodos(todos.filter(todo => !todo.completed))
+
+type TodoListProps = {
+  todos: ToDoItems[]
 }
+
+export default function TodoList({ todos }: TodoListProps) {
   return (
-   <ClearCompletedContext.Provider value={{ clearCompleted }}>
-    {/* ...your app... */}
-  </ClearCompletedContext.Provider>
+    <div>
+        <div>
+      {todos.map(td => (
+        <ToDoItem key={td.id} {...td} />
+      ))}
+    </div>
+    </div>
   )
 }

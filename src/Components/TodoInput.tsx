@@ -1,7 +1,12 @@
 //An input field to add new todos.
 import React, { useState } from 'react'
 
-export const TodoInput = () => {
+
+type TodoInputProps = {
+  addTodo: (text: string) => void
+}
+
+export const TodoInput = ({ addTodo }: TodoInputProps) => {
   const [input, setInput] = useState("")
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -10,6 +15,7 @@ export const TodoInput = () => {
 
   const handleAddTodo = () => {
     if (input.trim() === "") return
+      addTodo(input)
         setInput("")
     }
 
