@@ -63,11 +63,13 @@ export default function ToDaApp() {
           deleteTodo={deleteTodo}
         />
       </div>
+      <div className="flex align-items-end" style={{maxWidth:'777px'}}>
+
       <Check
-        className='btn'
         total={todoz.length}
         completed={todoz.filter((t) => t.completed).length}
-      />
+        />
+        </div>
     </ClearCompletedContext.Provider>
   );
 }
