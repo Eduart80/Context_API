@@ -6,7 +6,7 @@ export default function ThemeSet() {
 
     
   return (
-       <button type='button' onClick={toggleTheme}>
+       <button className='btn btn-outline-secondary' type='button' onClick={toggleTheme}>
         Switch to {theme === 'light' ? 'dark' : 'light'}
         </button>
   )

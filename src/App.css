@@ -1,6 +1,25 @@
 #root {
-  max-width: 1280px;
+  max-width: 777px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.light-mode {
+  background: #fff;
+  color: #222;
+}
+
+.dark-mode {
+  background: #222;
+  color: #fff;
+}
+#header{
+  display: flex;
+ justify-content:center;
+ margin: 15px;
+}
+#header > div {
+  margin-right: 20px;
+
 }

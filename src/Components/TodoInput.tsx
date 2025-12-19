@@ -20,14 +20,15 @@ export const TodoInput = ({ addTodo }: TodoInputProps) => {
     }
 
   return (
-    <div>
+    <div className='input-group mb-3'>
       <input
+      className='form-control'
         type="text"
         placeholder="What need to be done?"
         value={input}
         onChange={handleInputChange}
       />
-      <button className="btn btn-primary btn-sm" onClick={handleAddTodo}>
+      <button className="btn btn-outline-secondary" onClick={handleAddTodo}>
         Add Todo
       </button>
     </div>

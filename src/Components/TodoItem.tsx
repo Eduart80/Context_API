@@ -22,7 +22,7 @@ export default function TodoItem({
         alignItems: "center",
         justifyContent: "space-between",
         padding: "8px",
-        marginBottom: "6px",
+        marginBottom: "1px",
       }}
     >
       <input
