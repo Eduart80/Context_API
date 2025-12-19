@@ -23,6 +23,9 @@ export default function ToDaApp() {
     )
   )
 }
+const deleteTodo = (id: number | string) => {
+  setTodoz(todoz => todoz.filter(todo => todo.id !== id))
+}
 const filteredTodos = todoz.filter(todo => {
     if (filter === 'active') return !todo.completed
     if (filter === 'completed') return todo.completed
@@ -38,7 +41,7 @@ const filteredTodos = todoz.filter(todo => {
           <button onClick={() => setFilter('active')}>Not Completed</button>
           <button onClick={() => setFilter('completed')}>Completed</button>
         </div>
-        <TodoList todos={filteredTodos} toggleTodo={toggleTodo}/>
+        <TodoList todos={filteredTodos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
     </div>
     </ClearCompletedContext.Provider>
   )
