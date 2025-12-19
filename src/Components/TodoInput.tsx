@@ -27,7 +27,7 @@ export const TodoInput = ({ addTodo }: TodoInputProps) => {
         value={input}
         onChange={handleInputChange}
       />
-      <button className="btn" onClick={handleAddTodo}>
+      <button className="btn btn-primary btn-sm" onClick={handleAddTodo}>
         Add Todo
       </button>
     </div>
